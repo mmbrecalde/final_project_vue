@@ -5,6 +5,7 @@ import vuetify from "./plugins/vuetify";
 import { loadFonts } from "./plugins/webfontloader";
 import store from "./store";
 import "./assets/main.css";
+import VueSweetalert2 from 'vue-sweetalert2';
 
 loadFonts();
 

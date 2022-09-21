@@ -87,7 +87,7 @@ export default {
             if (this.admin) {
                 DataService.update(this.currentHisto.userID, this.currentHisto.key, data)
                     .then(() => {
-                        alert("Data was updated successfully!");
+                        this.$swal("Success!", "The data has been updated!", "success");
                     })
                     .catch((e) => {
                         console.log(e);
@@ -95,7 +95,7 @@ export default {
             } else {
                 DataService.update("0", this.currentHisto.key, data)
                     .then(() => {
-                        alert("Data was updated successfully!");
+                        this.$swal("Success!", "The data has been updated!", "success");
                     })
                     .catch((e) => {
                         console.log(e);
@@ -106,6 +106,21 @@ export default {
         deleteHistory() {
             DataService.delete(this.currentHisto.userID, this.currentHisto.key)
                 .then(() => {
+                    this.$swal({
+
+                    title: 'Are you sure?',
+
+                    text: "You won't be able to revert this!",
+
+                    type: 'warning',
+
+                    showCancelButton: true,
+
+                    confirmButtonColor: '#3085d6',
+
+                    cancelButtonColor: '#d33',
+
+                    confirmButtonText: 'Yes, delete it!'});
                     this.$emit("refreshList");
                 })
                 .catch((e) => {

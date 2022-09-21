@@ -83,6 +83,7 @@ import { auth } from '../firebase'
 export default {
   data() {
     return {
+      admin: false,
       drawer: false,
       loginUrl: '/login',
       registerUrl: '/register',
@@ -99,6 +100,7 @@ export default {
       rail: false,
     }
   },
+
   setup() {
 
     const store = useStore()
@@ -115,6 +117,9 @@ export default {
       router.push('/login')
     }
     return { user, signOut }
-  }
+  },
+  mounted() {
+    this.admin = DataService.isAdmin();
+  },
 };
 </script>
