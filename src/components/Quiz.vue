@@ -82,6 +82,15 @@
             </div>
 
             <div v-show="admin">
+                <v-img
+                        class="align-end text-white"
+                        height="200"
+                        src="https://th.bing.com/th/id/OIP.zlCtlTZMsPFFkifitjJBsQHaEo?pid=ImgDet&rs=1"
+                        cover
+                        gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
+                    >
+                        <v-card-title>General Information Technology</v-card-title>
+                    </v-img>
                 <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to be a user to play.">
                 </v-card>
             </div>
