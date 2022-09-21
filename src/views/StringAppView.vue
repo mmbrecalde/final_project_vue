@@ -61,5 +61,20 @@
         convert.value = word.value.replace(/[aeiouAEIOU]/ig,'*');
    }
    
+        const admin = DataService.isAdmin();
+        const Image = ImageSrc;
+        const store = useStore()
+        const router = useRouter()
+        auth.onAuthStateChanged(user => {
+            store.dispatch("fetchUser", user);
+        });
+        const user = computed(() => {
+            return store.getters.user;
+        });
+        const signOut = async () => {
+            await store.dispatch('logOut')
+            router.push('/login')
+        }
+        return { user, signOut, Image, admin }
    </script>
    
