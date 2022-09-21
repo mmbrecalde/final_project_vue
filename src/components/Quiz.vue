@@ -82,7 +82,7 @@
             </div>
 
             <div v-show="admin">
-                <v-card class="mx-auto mt-6 bg-info" width="25%" title="Sorry" text="Admin cannot play">
+                <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to be a user to play.">
                 </v-card>
             </div>
             
