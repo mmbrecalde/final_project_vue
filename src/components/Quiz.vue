@@ -82,16 +82,7 @@
             </div>
 
             <div v-show="admin">
-                <v-img
-                        class="align-end text-white"
-                        height="200"
-                        src="https://th.bing.com/th/id/OIP.zlCtlTZMsPFFkifitjJBsQHaEo?pid=ImgDet&rs=1"
-                        cover
-                        gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
-                    >
-                        <v-card-title>General Information Technology</v-card-title>
-                    </v-img>
-                <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to be a user to play.">
+                <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to be a user to take the quiz.">
                 </v-card>
             </div>
             
@@ -101,11 +92,8 @@
             <v-card class="mx-auto mt-6 bg-info" max-width="25%" variant="outlined">
                 <v-card-item color="white">
                     <div>
-                        <div class="text-overline mb-1">
-                            YOU ARE NOT LOGGED IN!
-                        </div>
-                        <div class="text-caption mb-3">Please login if you already have an account, otherwise create one
-                            now.</div>
+                        <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to login to take the quiz.">
+                        </v-card>
                     </div>
                 </v-card-item>
             </v-card>
