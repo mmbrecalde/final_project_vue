@@ -37,11 +37,6 @@
        </v-card-text>
        
      </v-card>  
-
-     <div v-show="admin">
-                <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to be a user to access this page.">
-                </v-card>
-            </div>
    
    </template>
    
@@ -61,20 +56,5 @@
         convert.value = word.value.replace(/[aeiouAEIOU]/ig,'*');
    }
    
-        const admin = DataService.isAdmin();
-        const Image = ImageSrc;
-        const store = useStore()
-        const router = useRouter()
-        auth.onAuthStateChanged(user => {
-            store.dispatch("fetchUser", user);
-        });
-        const user = computed(() => {
-            return store.getters.user;
-        });
-        const signOut = async () => {
-            await store.dispatch('logOut')
-            router.push('/login')
-        }
-        return { user, signOut, Image, admin }
    </script>
    
