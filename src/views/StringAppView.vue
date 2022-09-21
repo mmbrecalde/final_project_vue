@@ -37,6 +37,11 @@
        </v-card-text>
        
      </v-card>  
+
+     <div v-show="admin">
+                <v-card class="mx-auto mt-10 bg-red" width="25%" title="Oops!" text="You need to be a user to access this page.">
+                </v-card>
+            </div>
    
    </template>
    
